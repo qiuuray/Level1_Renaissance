@@ -24,7 +24,6 @@ public class PaintingWithClouds1 : MonoBehaviour
     void Start()
     {
         remainingClouds = cloudsContainer.childCount;
-        Debug.Log("Clouds found: " + remainingClouds);
 
         foreach (Transform child in cloudsContainer)
         {
@@ -37,10 +36,6 @@ public class PaintingWithClouds1 : MonoBehaviour
                 GameObject cloudRef = child.gameObject; 
                 btn.onClick.RemoveAllListeners();
                 btn.onClick.AddListener(() => OnCloudClicked(cloudRef));
-            }
-            else
-            {
-                Debug.LogWarning("No Button component on: " + child.name);
             }
         }
     }
@@ -85,7 +80,6 @@ public class PaintingWithClouds1 : MonoBehaviour
         if (counter == null) return;
 
         counter.currentHits++;
-        Debug.Log(cloud.name + " hit " + counter.currentHits + "/" + counter.hitsRequired);
         
         var img = cloud.GetComponent<Image>();
         if (img != null)
@@ -100,8 +94,6 @@ public class PaintingWithClouds1 : MonoBehaviour
             cloud.SetActive(false);   
             Destroy(cloud, 0.1f);     
 
-            Debug.Log("Cloud removed! Remaining: " + remainingClouds);
-
             if (remainingClouds <= 0)
             {
                 allCloudsCleared = true;
@@ -112,7 +104,6 @@ public class PaintingWithClouds1 : MonoBehaviour
 
     void OnTriggerEnter2D(Collider2D other)
     {
-        Debug.Log("Trigger entered by: " + other.name + " tag: " + other.tag);
         if (other.CompareTag("Player"))
             isPlayerNear = true;
     }

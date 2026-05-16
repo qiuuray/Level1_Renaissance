@@ -315,7 +315,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0206f116f5f0e1747a8e7ef3c50c20e3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PaintingWithClouds1
-  paintingUI: {fileID: 865409922}
+  paintingUI: {fileID: 1314734034}
   cloudsContainer: {fileID: 1701233124}
   hitsPerCloud: 3
 --- !u!61 &317305212
@@ -352,7 +352,7 @@ BoxCollider2D:
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
-  m_Offset: {x: 0, y: -0.15981323}
+  m_Offset: {x: 0, y: -0.32318437}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -362,7 +362,7 @@ BoxCollider2D:
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
-  m_Size: {x: 1, y: 1.3196265}
+  m_Size: {x: 1, y: 1.6463687}
   m_EdgeRadius: 0
 --- !u!1 &753140267
 GameObject:
@@ -582,19 +582,7 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 849248649}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 317305211}
-        m_TargetAssemblyTypeName: PaintingWithClouds1, Assembly-CSharp
-        m_MethodName: OnCloudClicked
-        m_Mode: 2
-        m_Arguments:
-          m_ObjectArgument: {fileID: 849248646}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.GameObject, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
 --- !u!114 &849248649
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -714,19 +702,7 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 851219249}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 317305211}
-        m_TargetAssemblyTypeName: PaintingWithClouds1, Assembly-CSharp
-        m_MethodName: OnCloudClicked
-        m_Mode: 2
-        m_Arguments:
-          m_ObjectArgument: {fileID: 851219246}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.GameObject, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
 --- !u!114 &851219249
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -790,12 +766,12 @@ RectTransform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 865409922}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 15.594566, y: 8.378179, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 1290879485}
+  m_Father: {fileID: 1314734035}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -929,11 +905,11 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1833338445589567260, guid: 58b2cbb3d2b1528499d213e924afbe9b, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0
+      value: -4.37
       objectReference: {fileID: 0}
     - target: {fileID: 1833338445589567260, guid: 58b2cbb3d2b1528499d213e924afbe9b, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0
+      value: -4.42
       objectReference: {fileID: 0}
     - target: {fileID: 1833338445589567260, guid: 58b2cbb3d2b1528499d213e924afbe9b, type: 3}
       propertyPath: m_LocalPosition.z
@@ -1057,19 +1033,7 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1280397761}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 317305211}
-        m_TargetAssemblyTypeName: PaintingWithClouds1, Assembly-CSharp
-        m_MethodName: OnCloudClicked
-        m_Mode: 2
-        m_Arguments:
-          m_ObjectArgument: {fileID: 1280397758}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.GameObject, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
 --- !u!114 &1280397761
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1203,8 +1167,7 @@ RectTransform:
   m_LocalScale: {x: 0, y: 0, z: 0}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 865409923}
-  - {fileID: 1701233124}
+  - {fileID: 1314734035}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
@@ -1212,6 +1175,43 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 0}
+--- !u!1 &1314734034
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1314734035}
+  m_Layer: 5
+  m_Name: PaintingPanel
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &1314734035
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1314734034}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 865409923}
+  - {fileID: 1701233124}
+  m_Father: {fileID: 1290879485}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 100, y: 100}
+  m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &1701233123
 GameObject:
   m_ObjectHideFlags: 0
@@ -1235,7 +1235,7 @@ RectTransform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1701233123}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -1245,7 +1245,7 @@ RectTransform:
   - {fileID: 851219247}
   - {fileID: 2074448224}
   - {fileID: 1280397759}
-  m_Father: {fileID: 1290879485}
+  m_Father: {fileID: 1314734035}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -1333,19 +1333,7 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1954865676}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 317305211}
-        m_TargetAssemblyTypeName: PaintingWithClouds1, Assembly-CSharp
-        m_MethodName: OnCloudClicked
-        m_Mode: 2
-        m_Arguments:
-          m_ObjectArgument: {fileID: 1954865673}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.GameObject, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
 --- !u!114 &1954865676
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1465,19 +1453,7 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 2074448226}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 317305211}
-        m_TargetAssemblyTypeName: PaintingWithClouds1, Assembly-CSharp
-        m_MethodName: OnCloudClicked
-        m_Mode: 2
-        m_Arguments:
-          m_ObjectArgument: {fileID: 2074448223}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.GameObject, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
 --- !u!114 &2074448226
 MonoBehaviour:
   m_ObjectHideFlags: 0

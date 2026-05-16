@@ -4,7 +4,8 @@ using UnityEngine.UI;
 public class PaintingWithClouds1 : MonoBehaviour
 {
     public GameObject paintingUI;
-    public Transform cloudsContainer;   
+    public Transform cloudsContainer; 
+    public GameObject dialogueBox;
     
     public int hitsPerCloud = 3;
 
@@ -12,10 +13,12 @@ public class PaintingWithClouds1 : MonoBehaviour
     private bool isPaintingOpen = false;
     private bool allCloudsCleared = false;
     private int remainingClouds = 0;
+    private bool isDialogueOpen = false;
 
     void Awake()
     {
         paintingUI.SetActive(false);
+        dialogueBox.SetActive(false);
     }
 
     void Start()
@@ -44,14 +47,21 @@ public class PaintingWithClouds1 : MonoBehaviour
 
     void Update()
     {
-        if (isPlayerNear && !isPaintingOpen)
-            Debug.Log("Press E to open painting");
-
-        if (isPlayerNear && !isPaintingOpen && Input.GetKeyDown(KeyCode.E))
+        if (isPlayerNear && !isPaintingOpen && !isDialogueOpen && Input.GetKeyDown(KeyCode.E))
+        {
+            isDialogueOpen = true;
+            dialogueBox.SetActive(true);
+        }
+        else if (isDialogueOpen && Input.GetKeyDown(KeyCode.E))
+        {
+            isDialogueOpen = false;
+            dialogueBox.SetActive(false);
             OpenPainting();
-
+        }
         else if (isPaintingOpen && allCloudsCleared && Input.GetKeyDown(KeyCode.E))
+        {
             ClosePainting();
+        }
     }
 
     void OpenPainting()

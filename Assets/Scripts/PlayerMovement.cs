@@ -1,7 +1,7 @@
 using UnityEngine;
 using UnityEngine.InputSystem;
 
-public class NewMonoBehaviourScript : MonoBehaviour
+public class PlayerMovement : MonoBehaviour
 {
     
     public float moveSpeed = 5f;
@@ -39,4 +39,7 @@ public class NewMonoBehaviourScript : MonoBehaviour
         anim.SetFloat("InputX", moveInput.x);
         anim.SetFloat("InputY", moveInput.y);
     }
+    
+  
+    
 }

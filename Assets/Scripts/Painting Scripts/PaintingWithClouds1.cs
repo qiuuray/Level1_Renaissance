@@ -69,6 +69,7 @@ public class PaintingWithClouds1 : MonoBehaviour
     {
         isPaintingOpen = false;
         paintingUI.SetActive(false);
+        GmManager.instance.PaintingCleared(); 
         // inventory goes here when mike is ready
     }
 

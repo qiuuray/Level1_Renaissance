@@ -12,18 +12,16 @@ public class GmManager : MonoBehaviour
     void Awake()
     {
         instance = this;
-        room6.SetActive(false);
     }
 
     public void PaintingCleared()
     {
         paintingsCleared++;
         Debug.Log("Paintings cleared: " + paintingsCleared + "/" + totalPaintings);
-        
-        if (paintingsCleared >= totalPaintings)
-        {
-            room6.SetActive(true);
-            Debug.Log("All paintings cleared! Room 6 unlocked.");
-        }
+    }
+    
+    public bool AllCleared()
+    {
+        return paintingsCleared >= totalPaintings;
     }
 }

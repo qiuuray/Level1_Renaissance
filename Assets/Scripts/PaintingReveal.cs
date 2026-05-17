@@ -25,17 +25,17 @@ public class PaintingReveal : MonoBehaviour
 
         if (Input.GetKeyDown(KeyCode.E))
         {
-            if (GmManager.instance.AllCleared())
+            if (lockedDialogue.activeSelf)
             {
-                // all paintings done, allow interaction
-                lockedDialogue.SetActive(false);
+                lockedDialogue.SetActive(false);  // E closes locked dialogue
+                return;
+            }
+
+            if (GmManager.instance.AllCleared() && !isOpen)
+            {
                 openDialogue.SetActive(false);
                 isOpen = true;
-            }
-            else
-            {
-                // not all cleared, show locked dialogue
-                lockedDialogue.SetActive(true);
+                paintingPanel.SetActive(true);    // open big painting
             }
         }
     }
@@ -47,7 +47,7 @@ public class PaintingReveal : MonoBehaviour
         coverImage.SetActive(false);
         Debug.Log("Painting revealed!");
         // to add inventory here
-    }
+    } 
 
     void OnTriggerEnter2D(Collider2D other)
     {

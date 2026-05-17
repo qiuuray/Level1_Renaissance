@@ -1,11 +1,18 @@
 using UnityEngine;
+using UnityEngine.EventSystems;
 
-public class CoverTrigger : MonoBehaviour
+public class CoverTrigger : MonoBehaviour, IPointerEnterHandler
 {
-    public PaintingReveal revealScript;
+    private PaintingReveal revealScript;
 
-    void OnMouseOver()
+    void Start()
     {
-        revealScript.OnCoverSwiped();
+        revealScript = FindObjectOfType<PaintingReveal>();
+    }
+
+    public void OnPointerEnter(PointerEventData eventData)
+    {
+        if (revealScript != null)
+            revealScript.OnCoverSwiped();
     }
 }

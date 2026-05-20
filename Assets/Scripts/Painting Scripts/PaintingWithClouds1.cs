@@ -6,6 +6,8 @@ public class PaintingWithClouds1 : MonoBehaviour
     public GameObject paintingUI;
     public Transform cloudsContainer; 
     public GameObject dialogueBox;
+    public Sprite itemSprite;
+    public GameObject pickupDialogue; 
     
     public int hitsPerCloud = 3;
 
@@ -69,8 +71,20 @@ public class PaintingWithClouds1 : MonoBehaviour
     {
         isPaintingOpen = false;
         paintingUI.SetActive(false);
-        GmManager.instance.PaintingCleared(); 
-        // inventory goes here when mike is ready
+        GmManager.instance.PaintingCleared();
+
+        InventoryController inventory = FindFirstObjectByType<InventoryController>();
+        if (inventory != null && itemSprite != null)
+        {
+            inventory.AddItem(itemSprite);
+            pickupDialogue.SetActive(true);
+            Invoke("HidePickupDialogue", 2f);  // hides after 2 seconds
+        }
+    }
+
+    void HidePickupDialogue()
+    {
+        pickupDialogue.SetActive(false);
     }
 
     public void OnCloudClicked(GameObject cloud)

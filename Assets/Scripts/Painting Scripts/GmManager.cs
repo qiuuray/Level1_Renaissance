@@ -5,7 +5,7 @@ public class GmManager : MonoBehaviour
     public static GmManager instance;
     
     private int paintingsCleared = 0;
-    private int totalPaintings = 5;
+    private int totalPaintings = 4;
     
     public GameObject room6;
 

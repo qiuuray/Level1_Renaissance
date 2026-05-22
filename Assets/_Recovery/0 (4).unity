@@ -5083,8 +5083,8 @@ RectTransform:
   - {fileID: 1263028724}
   - {fileID: 834896451}
   - {fileID: 1632275315}
-  - {fileID: 1238690682}
   - {fileID: 787747019}
+  - {fileID: 1238690682}
   - {fileID: 1684693344}
   m_Father: {fileID: 1290879485}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}

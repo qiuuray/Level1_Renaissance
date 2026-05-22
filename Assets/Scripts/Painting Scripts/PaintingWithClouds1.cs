@@ -16,6 +16,7 @@ public class PaintingWithClouds1 : MonoBehaviour
     private bool allCloudsCleared = false;
     private int remainingClouds = 0;
     private bool isDialogueOpen = false;
+    private bool isDone = false;
 
     void Awake()
     {
@@ -80,6 +81,8 @@ public class PaintingWithClouds1 : MonoBehaviour
             pickupDialogue.SetActive(true);
             Invoke("HidePickupDialogue", 2f);  // hides after 2 seconds
         }
+        isDone = true;
+        
     }
 
     void HidePickupDialogue()

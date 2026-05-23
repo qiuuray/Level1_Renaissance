@@ -20,6 +20,7 @@
   </component>
   <component name="HighlightingSettingsPerFile">
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/MouseLight.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/MusicManager.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Painting Scripts/Painting4Interact.cs" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="MetaFilesCheckinStateConfiguration" checkMetaFiles="true" />
@@ -113,7 +114,7 @@
       <workItem from="1779360109656" duration="2155000" />
       <workItem from="1779393523444" duration="3280000" />
       <workItem from="1779450225388" duration="3727000" />
-      <workItem from="1779528610400" duration="5958000" />
+      <workItem from="1779528610400" duration="9688000" />
     </task>
     <servers />
   </component>

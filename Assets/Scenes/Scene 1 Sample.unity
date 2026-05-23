@@ -2048,8 +2048,29 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 5971435138385384279, guid: 58b2cbb3d2b1528499d213e924afbe9b, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 836420872885439357}
   m_SourcePrefab: {fileID: 100100000, guid: 58b2cbb3d2b1528499d213e924afbe9b, type: 3}
+--- !u!1 &836420872885439356 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5971435138385384279, guid: 58b2cbb3d2b1528499d213e924afbe9b, type: 3}
+  m_PrefabInstance: {fileID: 836420872885439355}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &836420872885439357
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 836420872885439356}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b9d6ef84b9c2c4d4daed9c9dd31e8296, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::MovementPlayer
+  teleporter: {fileID: 1882269639}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0

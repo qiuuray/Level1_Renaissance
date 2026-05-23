@@ -8,16 +8,19 @@ public class CollectibleObject : MonoBehaviour
     public Sprite itemSprite;
     public string itemName;
     public string itemDescription;
+    public AudioClip collectSound;
 
     public GameObject itemPopup;
     public Image popupImage;
     public TMPro.TextMeshProUGUI popupName;
     public TMPro.TextMeshProUGUI popupDescription;
+    private AudioSource audioSource;
 
     private bool isCollected = false;
 
     void Start()
     {
+        audioSource = GetComponent<AudioSource>();
         itemPopup.SetActive(false);
     }
 
@@ -25,6 +28,9 @@ public class CollectibleObject : MonoBehaviour
     {
         if (isCollected) return;
         isCollected = true;
+        
+        if (collectSound != null)
+            audioSource.PlayOneShot(collectSound);
         
         // show big popup with item info
         popupImage.sprite = itemSprite;

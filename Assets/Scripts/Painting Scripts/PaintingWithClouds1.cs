@@ -7,7 +7,8 @@ public class PaintingWithClouds1 : MonoBehaviour
     public Transform cloudsContainer; 
     public GameObject dialogueBox;
     public Sprite itemSprite;
-    public GameObject pickupDialogue; 
+    public GameObject pickupDialogue;
+    public AudioClip interactSound;
     
     public int hitsPerCloud = 3;
 
@@ -17,11 +18,13 @@ public class PaintingWithClouds1 : MonoBehaviour
     private int remainingClouds = 0;
     private bool isDialogueOpen = false;
     private bool isDone = false;
+    private AudioSource audioSource;
 
     void Awake()
     {
         paintingUI.SetActive(false);
         dialogueBox.SetActive(false);
+        audioSource = GetComponent<AudioSource>();
     }
 
     void Start()
@@ -47,6 +50,8 @@ public class PaintingWithClouds1 : MonoBehaviour
     {
         if (isPlayerNear && !isPaintingOpen && !isDialogueOpen && Input.GetKeyDown(KeyCode.E))
         {
+            if (interactSound != null)
+                audioSource.PlayOneShot(interactSound);
             isDialogueOpen = true;
             dialogueBox.SetActive(true);
         }

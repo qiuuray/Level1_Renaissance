@@ -8,6 +8,7 @@ public class Painting4Interact : MonoBehaviour
     
     private bool isPlayerNear = false;
     private bool isDialogueOpen = false;
+    private GameObject lockedDialogue;
     
     void Awake()
     {
@@ -51,7 +52,10 @@ public class Painting4Interact : MonoBehaviour
         {
             isPlayerNear = false;
             isDialogueOpen = false;
-            dialogueBox.SetActive(false);
+            if (dialogueBox != null)
+                dialogueBox.SetActive(false);
+            if (lockedDialogue != null)
+                lockedDialogue.SetActive(false);
         }
     }
 }

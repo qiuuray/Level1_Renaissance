@@ -7,11 +7,15 @@ public class MovementPlayer : MonoBehaviour
     public string sceneToLoad = "Scene2";
     public float delayBeforeTeleport = 3f; // so players have time to read
     
+    public AudioClip interactSound;
+    private AudioSource audioSource;
+    
     private bool isNearTeleporter = false;
 
     void Awake()
     {
         dialogueBox.SetActive(false);
+        audioSource = GetComponent<AudioSource>();
     }
     void Update()
     {
@@ -20,6 +24,8 @@ public class MovementPlayer : MonoBehaviour
         if (isNearTeleporter && Input.GetKeyDown(KeyCode.E))
         {
             {
+                if (interactSound != null)
+                    audioSource.PlayOneShot(interactSound);
                 dialogueBox.SetActive(true);
                 Invoke("LoadScene", delayBeforeTeleport);
             }
@@ -42,7 +48,8 @@ public class MovementPlayer : MonoBehaviour
         if (other.CompareTag("Teleporter"))
         {
             isNearTeleporter = false;
-            dialogueBox.SetActive(false);
+            if (dialogueBox != null)
+                dialogueBox.SetActive(false);
         }
            
     }

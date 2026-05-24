@@ -17,5 +17,8 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Painting4Scene.unity
     guid: d9dc8f839f2932c45a839dc8310cdee8
+  - enabled: 1
+    path: Assets/Scenes/Controls.unity
+    guid: afb14255ffad32a42947c084465b5c97
   m_configObjects:
     com.unity.input.settings.actions: {fileID: -944628639613478452, guid: 2bcd2660ca9b64942af0de543d8d7100, type: 3}
